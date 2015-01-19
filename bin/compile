@@ -19,8 +19,7 @@ function set-default-env (){
 }
 
 echo "-----> Fetching and vendoring cmake"
-mkdir -p "$VENDOR_DIR"
-curl 'http://www.cmake.org/files/v3.1/cmake-3.1.0.tar.gz' -s -o - | tar -xzf -C "$VENDOR_DIR"
+curl 'http://www.cmake.org/files/v3.1/cmake-3.1.0.tar.gz' -s -o - | tar -xz -C "$VENDOR_DIR"
 
 mv "$VENDOR_DIR/cmake-3.1.0" "$VENDOR_DIR/cmake"
 cd "$VENDOR_DIR/cmake"
